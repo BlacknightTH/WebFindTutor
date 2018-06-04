@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFindTutor", "WebFindTutor\WebFindTutor.csproj", "{14C3F0F1-27AB-438D-ADA1-36A839C6A529}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFindTutorAPI", "WebFindTutorAPI\WebFindTutorAPI.csproj", "{D41480CD-16C4-4BB0-AD1D-931ECD86ECE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFindTutor_Client", "WebFindTutor_Client\WebFindTutor_Client.csproj", "{E2DD02B8-A05B-4DB4-B170-699D7F634CBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{14C3F0F1-27AB-438D-ADA1-36A839C6A529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14C3F0F1-27AB-438D-ADA1-36A839C6A529}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14C3F0F1-27AB-438D-ADA1-36A839C6A529}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14C3F0F1-27AB-438D-ADA1-36A839C6A529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41480CD-16C4-4BB0-AD1D-931ECD86ECE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41480CD-16C4-4BB0-AD1D-931ECD86ECE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41480CD-16C4-4BB0-AD1D-931ECD86ECE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41480CD-16C4-4BB0-AD1D-931ECD86ECE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2DD02B8-A05B-4DB4-B170-699D7F634CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2DD02B8-A05B-4DB4-B170-699D7F634CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2DD02B8-A05B-4DB4-B170-699D7F634CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2DD02B8-A05B-4DB4-B170-699D7F634CBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
