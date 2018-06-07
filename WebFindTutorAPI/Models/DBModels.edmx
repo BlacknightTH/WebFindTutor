@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AMPHUR">
           <Key>
             <PropertyRef Name="AMPHUR_ID" />
@@ -35,6 +35,25 @@
           <Property Name="GEO_ID" Type="int" Nullable="false" />
           <Property Name="GEO_NAME" Type="varchar" MaxLength="150" />
         </EntityType>
+        <EntityType Name="INSTRUCTOR">
+          <Key>
+            <PropertyRef Name="Instructor_ID" />
+          </Key>
+          <Property Name="Instructor_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Instructor_FirstName" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Instructor_LastName" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Instructor_Email" Type="varbinary" MaxLength="500" />
+          <Property Name="Instructor_TelNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Instructor_location" Type="varchar" MaxLength="500" />
+          <Property Name="Instructor_Pic" Type="varchar" MaxLength="500" />
+          <Property Name="Instructor_University" Type="varchar" MaxLength="500" />
+          <Property Name="Teaching_History" Type="varbinary" MaxLength="500" />
+          <Property Name="Course_ID" Type="int" />
+          <Property Name="Subject_ID" Type="int" />
+          <Property Name="Faculty" Type="varchar" MaxLength="500" />
+          <Property Name="Department" Type="varchar" MaxLength="500" />
+          <Property Name="Confirmation" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="PROVINCE">
           <Key>
             <PropertyRef Name="PROVINCE_ID" />
@@ -57,11 +76,11 @@
           <EntitySet Name="AMPHUR" EntityType="Self.AMPHUR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DISTRICTS" EntityType="Self.DISTRICTS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GEOGRAPHY" EntityType="Self.GEOGRAPHY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INSTRUCTOR" EntityType="Self.INSTRUCTOR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PROVINCE" EntityType="Self.PROVINCE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ZIPCODES" EntityType="Self.ZIPCODES" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -119,7 +138,27 @@
           <EntitySet Name="GEOGRAPHY" EntityType="Self.GEOGRAPHY" />
           <EntitySet Name="PROVINCE" EntityType="Self.PROVINCE" />
           <EntitySet Name="ZIPCODES" EntityType="Self.ZIPCODES" />
+          <EntitySet Name="INSTRUCTOR" EntityType="TestModel.INSTRUCTOR" />
         </EntityContainer>
+        <EntityType Name="INSTRUCTOR">
+          <Key>
+            <PropertyRef Name="Instructor_ID" />
+          </Key>
+          <Property Name="Instructor_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Instructor_FirstName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Instructor_LastName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Instructor_Email" Type="Binary" MaxLength="500" FixedLength="false" />
+          <Property Name="Instructor_TelNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Instructor_location" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Instructor_Pic" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Instructor_University" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Teaching_History" Type="Binary" MaxLength="500" FixedLength="false" />
+          <Property Name="Course_ID" Type="Int32" />
+          <Property Name="Subject_ID" Type="Int32" />
+          <Property Name="Faculty" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Confirmation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -176,6 +215,26 @@
                 <ScalarProperty Name="ZIPCODE_ID" ColumnName="ZIPCODE_ID" />
                 <ScalarProperty Name="DISTRICT_CODE" ColumnName="DISTRICT_CODE" />
                 <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INSTRUCTOR">
+            <EntityTypeMapping TypeName="TestModel.INSTRUCTOR">
+              <MappingFragment StoreEntitySet="INSTRUCTOR">
+                <ScalarProperty Name="Confirmation" ColumnName="Confirmation" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Faculty" ColumnName="Faculty" />
+                <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+                <ScalarProperty Name="Course_ID" ColumnName="Course_ID" />
+                <ScalarProperty Name="Teaching_History" ColumnName="Teaching_History" />
+                <ScalarProperty Name="Instructor_University" ColumnName="Instructor_University" />
+                <ScalarProperty Name="Instructor_Pic" ColumnName="Instructor_Pic" />
+                <ScalarProperty Name="Instructor_location" ColumnName="Instructor_location" />
+                <ScalarProperty Name="Instructor_TelNumber" ColumnName="Instructor_TelNumber" />
+                <ScalarProperty Name="Instructor_Email" ColumnName="Instructor_Email" />
+                <ScalarProperty Name="Instructor_LastName" ColumnName="Instructor_LastName" />
+                <ScalarProperty Name="Instructor_FirstName" ColumnName="Instructor_FirstName" />
+                <ScalarProperty Name="Instructor_ID" ColumnName="Instructor_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
