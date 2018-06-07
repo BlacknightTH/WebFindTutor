@@ -11,7 +11,7 @@ namespace WebFindTutor_Client
     {
         public static HttpClient WebApiClient = new HttpClient();
 
-        private GlobalVariables()
+        static GlobalVariables()
         {
             WebApiClient.BaseAddress = new Uri("http://localhost:2930/api/");
             WebApiClient.DefaultRequestHeaders.Clear();

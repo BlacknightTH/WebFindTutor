@@ -30,5 +30,6 @@ namespace WebFindTutorAPI.Models
         public virtual DbSet<GEOGRAPHY> GEOGRAPHY { get; set; }
         public virtual DbSet<PROVINCE> PROVINCE { get; set; }
         public virtual DbSet<ZIPCODES> ZIPCODES { get; set; }
+        public virtual DbSet<INSTRUCTOR> INSTRUCTOR { get; set; }
     }
 }
