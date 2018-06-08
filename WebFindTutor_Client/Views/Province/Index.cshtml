@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebFindTutor_Client.Models.ProvinceModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table id="myTable" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PROVINCE_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROVINCE_CODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROVINCE_NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROVINCE_NAME_ENG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GEO_ID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PROVINCE_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PROVINCE_CODE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PROVINCE_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PROVINCE_NAME_ENG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GEO_ID)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PROVINCE_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROVINCE_CODE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROVINCE_NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROVINCE_NAME_ENG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GEO_ID)
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
+</table>

@@ -3,13 +3,21 @@
 @{
     ViewBag.Title = "Index";
 }
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css" />
 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="myTable">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Instructor_ID)
@@ -50,50 +58,51 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instructor_ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instructor_FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instructor_LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instructor_TelNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instructor_location)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instructor_Pic)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Instructor_University)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Course_ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Subject_ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Faculty)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Department)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Confirmation)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instructor_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instructor_FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instructor_LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instructor_TelNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instructor_location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instructor_Pic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instructor_University)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faculty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Confirmation)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
 
 </table>
