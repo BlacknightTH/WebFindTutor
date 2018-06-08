@@ -534,10 +534,10 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Instructor\Index.cshtml" />
     <Content Include="Views\Province\Index.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Register\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
