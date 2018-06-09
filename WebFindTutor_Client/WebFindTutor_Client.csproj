@@ -162,6 +162,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminInstructorController.cs" />
     <Compile Include="Controllers\AmphurController.cs" />
     <Compile Include="Controllers\DistrictController.cs" />
     <Compile Include="Controllers\GeographyController.cs" />
@@ -550,7 +551,6 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Instructor\Index.cshtml" />
     <Content Include="Views\Province\Index.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
@@ -558,6 +558,8 @@
     <Content Include="Views\Geography\Index.cshtml" />
     <Content Include="Views\Amphur\Index.cshtml" />
     <Content Include="Views\District\Index.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\AdminInstructor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
