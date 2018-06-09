@@ -162,15 +162,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AmphurController.cs" />
+    <Compile Include="Controllers\DistrictController.cs" />
+    <Compile Include="Controllers\GeographyController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\ProvinceController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ZipcodeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Models\AmphurModel.cs" />
+    <Compile Include="Models\DistrictModel.cs" />
+    <Compile Include="Models\GeographiesModel.cs" />
     <Compile Include="Models\InstructorModel.cs" />
     <Compile Include="Models\ProvinceModel.cs" />
+    <Compile Include="Models\ZipcodeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -545,6 +553,10 @@
     <Content Include="Views\Province\Index.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Zipcode\Index.cshtml" />
+    <Content Include="Views\Geography\Index.cshtml" />
+    <Content Include="Views\Amphur\Index.cshtml" />
+    <Content Include="Views\District\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

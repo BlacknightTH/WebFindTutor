@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebFindTutor_Client.Models.ZipcodeModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script>
+    $(document).ready(function () {
+        $('#ZipcodeTable').DataTable({
+            "pagingType": "full_numbers",
+            "scrollX": true,
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+        });
+    });
+</script>
+
+<table id="ZipcodeTable" class="table table-striped table-bordered" style="width:100%">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ZIPCODE_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DISTRICT_CODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZIPCODE)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZIPCODE_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DISTRICT_CODE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZIPCODE)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>
