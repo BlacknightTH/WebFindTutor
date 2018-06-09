@@ -555,6 +555,9 @@
     <Content Include="Views\Geography\Index.cshtml" />
     <Content Include="Views\Amphur\Index.cshtml" />
     <Content Include="Views\District\Index.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\AdminInstructor\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
