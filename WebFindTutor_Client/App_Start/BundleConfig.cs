@@ -27,9 +27,8 @@ namespace WebFindTutor_Client
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
                       "~/Content/site.css",
-                      "~/Content/Style.css",
                       "~/Content/w3.css",
                       "~/Content/font-awesome.min.css",
                       "~/Content/themes/base/jquery-ui.css",
