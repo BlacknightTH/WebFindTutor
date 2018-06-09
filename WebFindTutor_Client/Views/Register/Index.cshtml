@@ -2,6 +2,51 @@
 @{
     ViewBag.Title = "Index";
 }
+    <div class="panel panel-default center-block" style="width:400px">
+        <div class="panel-body">
+            <h3 align="center">สมัครสมาชิก</h3>
+            <h5 align="center"> <p>โปรดกรอกรายละเอียดในการสร้างยูสเซอร์</p> </h5>
+            @*<form action="/action_page.php">*@
+            <div class="container" style="width:350px">
 
-<h2>Index</h2>
+                <hr>
+                <label for="usr"><b>Username: *</b></label><br />
+                <input type="text" placeholder="ระบุ Username" name="name" required><br />
 
+
+                <label for="psw"><b>Password: *</b></label><br />
+                <input type="password" placeholder="ระบุ Password" name="psw" required><br />
+
+
+
+                <label for="psw-repeat"><b>ยืนยัน Password: *</b></label><br />
+                <input type="password" placeholder="ระบุ Password อีกครั้ง" name="psw-repeat" required><br />
+
+
+                <label for="email"><b>Email: *</b></label><br />
+                <input type="text" placeholder="ระบุ Email" name="email" required><br />
+
+
+                @*<label for="locate"><b>ที่อยู่:</b></label><br />
+                    <textarea placeholder="ระบุ ที่อยู่" name="address" required></textarea><br /> <br />
+
+                    <label for="pho"><b>เบอร์โทรศัพท์ติดต่อ: *</b></label><br />
+                    <input type="text" placeholder="ระบุ เบอร์โทรศัพท์" name="phone" required><br />*@
+
+                <label for="email"><b>สมัครสมาชิกในฐานะ: *</b></label><br />
+                <form action="">
+                    <input type="radio" name="status" required value="teacher"> ครูผู้สอน
+                    <input type="radio" name="status" required value="student"> นักเรียน
+                </form>
+
+                <hr>
+
+                <button type="submit" class="registerbtn">ยืนยันการสมัครสมาชิก</button>
+            </div>
+            <div class="container signin" style="width:350px">
+                <p>มีAccountอยู่แล้ว? <a href="#"><font color="blue">กดเข้าสู่ระบบที่นี่</font> </a>.</p>
+            </div>
+
+            @*</form>*@
+        </div>
+    </div>
