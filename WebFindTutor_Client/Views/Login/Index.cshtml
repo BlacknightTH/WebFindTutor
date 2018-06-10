@@ -2,28 +2,64 @@
 @{
     ViewBag.Title = "Index";
 }
+<br />
+@*<div class="panel panel-primary center-block" style="width:370px">
+        <div class="panel-heading text-center"><h4>สมัครสมาชิก</h4></div>
+        <div class="panel-body">
 
+            <label><b>Username *</b></label>
+            <div class="text-center">
+                @Html.TextBox("myTextBox", "", new { @class = "form-control w3-input w3-border w3-round", @placeholder = "Username"})
+                <input id="Username" type="text" class="form-control" name="Username" placeholder="Username" required>
+            </div>
 
-<form action="action_page.php">
-    <div class="imgcontainer">
-        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            <label><b>Password *</b></label>
+            <div class="text-center">
+                <input id="Password" type="password" class="form-control" name="Password" placeholder="Password" required>
+            </div>
+
+            <label><b>ยืนยัน Password *</b></label>
+            <div class="text-center">
+                <input id="Password-repeat" type="password" class="form-control" name="Password-repeat" placeholder="Password-repeat" required>
+            </div>
+
+            <label><b>Email *</b></label>
+            <div class="text-center">
+                <input id="email" type="text" class="form-control" name="email" placeholder="Email" required>
+            </div>
+
+            <label><b>Username *</b></label>
+            <div class="text-center">
+                <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+            </div>
+
+        </div>
+    </div>*@
+<div class="w3-card-4 center-block" style="width:330px">
+    <div class="w3-container w3-blue w3-center">
+        <h3>เข้าสู่ระบบ</h3>
     </div>
+    <br />
+    <form class="w3-container form-horizontal" action="/action_page.php">
+        <p>
+            <label><b>Username *</b></label>
+            <div>
+                @Html.TextBox("Username", "", new { @class = "w3-input w3-border", @placeholder = "Username" })
+            </div>
+        </p>
 
-    <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit">Login</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-</form> 
+        <p>
+            <label><b>Password *</b></label>
+            <div>
+                @Html.Password("Password", "", new { @class = "w3-input w3-border", @placeholder = "Password" })
+            </div>
+        </p>
+        <hr>
+        <p>
+            <button class="w3-btn w3-green w3-center registerbtn">เข้าสู่ระบบ</button>
+        </p>
+        <div class="w3-container signin">
+            <p>ยังไม่ได้สมัครสมาชิก <a href="@Url.Action("Index","Register")"><font color="blue">สมัครสมาชิกที่นี่</font> </a></p>
+        </div>
+    </form>
+</div>

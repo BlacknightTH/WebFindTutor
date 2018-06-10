@@ -9,10 +9,10 @@ namespace WebFindTutor_Client
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/jquery-ui-1.12.1.js",
+                        "~/Scripts/jquery-3.3.1.min.js",
+                        "~/Scripts/jquery-ui-1.12.1.min.js",
                         "~/Scripts/jquery.unobtrusive-ajax.min.js",
-                        "~/Scripts/DataTables/jquery.dataTables.js"));
+                        "~/Scripts/DataTables/jquery.dataTables.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -28,11 +28,12 @@ namespace WebFindTutor_Client
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
+                      "~/Content/Style.css",
                       "~/Content/site.css",
                       "~/Content/w3.css",
                       "~/Content/font-awesome.min.css",
-                      "~/Content/themes/base/jquery-ui.css",
-                      "~/Content/DataTables/css/jquery.dataTables.css"));
+                      "~/Content/themes/base/jquery-ui.min.css",
+                      "~/Content/DataTables/css/jquery.dataTables.min.css"));
         }
     }
 }

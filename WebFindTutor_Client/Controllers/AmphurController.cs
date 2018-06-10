@@ -16,6 +16,7 @@ namespace WebFindTutor_Client.Controllers
             IEnumerable<AmphurModel> istList;
             HttpResponseMessage response = GlobalVariables.WebApiClient.GetAsync("AMPHURs").Result;
             istList = response.Content.ReadAsAsync<IEnumerable<AmphurModel>>().Result;
+            
             return View(istList);
         }
     }

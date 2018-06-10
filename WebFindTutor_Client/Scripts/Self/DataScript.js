@@ -14,7 +14,7 @@
         "scrollX": true,
         "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
     });
-    $('#InstructorTable').DataTable({
+    $('#AdminInstructorTable').DataTable({
         "pagingType": "full_numbers",
         "scrollX": true,
         "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]

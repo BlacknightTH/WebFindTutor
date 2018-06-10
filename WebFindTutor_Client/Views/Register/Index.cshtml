@@ -2,51 +2,82 @@
 @{
     ViewBag.Title = "Index";
 }
-    <div class="panel panel-default center-block" style="width:400px">
-        <div class="panel-body">
-            <h3 align="center">สมัครสมาชิก</h3>
-            <h5 align="center"> <p>โปรดกรอกรายละเอียดในการสร้างยูสเซอร์</p> </h5>
-            @*<form action="/action_page.php">*@
-            <div class="container" style="width:350px">
+<br />
+    @*<div class="panel panel-primary center-block" style="width:370px">
+            <div class="panel-heading text-center"><h4>สมัครสมาชิก</h4></div>
+            <div class="panel-body">
 
-                <hr>
-                <label for="usr"><b>Username: *</b></label><br />
-                <input type="text" placeholder="ระบุ Username" name="name" required><br />
+                <label><b>Username *</b></label>
+                <div class="text-center">
+                    @Html.TextBox("myTextBox", "", new { @class = "form-control w3-input w3-border w3-round", @placeholder = "Username"})
+                    <input id="Username" type="text" class="form-control" name="Username" placeholder="Username" required>
+                </div>
 
+                <label><b>Password *</b></label>
+                <div class="text-center">
+                    <input id="Password" type="password" class="form-control" name="Password" placeholder="Password" required>
+                </div>
 
-                <label for="psw"><b>Password: *</b></label><br />
-                <input type="password" placeholder="ระบุ Password" name="psw" required><br />
+                <label><b>ยืนยัน Password *</b></label>
+                <div class="text-center">
+                    <input id="Password-repeat" type="password" class="form-control" name="Password-repeat" placeholder="Password-repeat" required>
+                </div>
 
+                <label><b>Email *</b></label>
+                <div class="text-center">
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" required>
+                </div>
 
+                <label><b>Username *</b></label>
+                <div class="text-center">
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                </div>
 
-                <label for="psw-repeat"><b>ยืนยัน Password: *</b></label><br />
-                <input type="password" placeholder="ระบุ Password อีกครั้ง" name="psw-repeat" required><br />
-
-
-                <label for="email"><b>Email: *</b></label><br />
-                <input type="text" placeholder="ระบุ Email" name="email" required><br />
-
-
-                @*<label for="locate"><b>ที่อยู่:</b></label><br />
-                    <textarea placeholder="ระบุ ที่อยู่" name="address" required></textarea><br /> <br />
-
-                    <label for="pho"><b>เบอร์โทรศัพท์ติดต่อ: *</b></label><br />
-                    <input type="text" placeholder="ระบุ เบอร์โทรศัพท์" name="phone" required><br />*@
-
-                <label for="email"><b>สมัครสมาชิกในฐานะ: *</b></label><br />
-                <form action="">
-                    <input type="radio" name="status" required value="teacher"> ครูผู้สอน
-                    <input type="radio" name="status" required value="student"> นักเรียน
-                </form>
-
-                <hr>
-
-                <button type="submit" class="registerbtn">ยืนยันการสมัครสมาชิก</button>
             </div>
-            <div class="container signin" style="width:350px">
-                <p>มีAccountอยู่แล้ว? <a href="#"><font color="blue">กดเข้าสู่ระบบที่นี่</font> </a>.</p>
-            </div>
-
-            @*</form>*@
+        </div>*@
+    <div class="w3-card-4 center-block" style="width:330px">
+        <div class="w3-container w3-blue w3-center">
+            <h3>สมัครสมาชิก</h3>
         </div>
+        <br/>
+        <form class="w3-container form-horizontal" action="/action_page.php">
+            <p>
+                <label><b>Username *</b></label>
+                <div>
+                    @Html.TextBox("Username", "", new { @class = "w3-input w3-border", @placeholder = "Username" })
+                </div>
+            </p>
+
+            <p>
+                <label><b>Password *</b></label>
+                <div>
+                    @Html.Password("Password", "", new { @class = "w3-input w3-border", @placeholder = "Password" })
+                </div>
+            </p>
+            <p>
+                <label><b>ยืนยัน Password *</b></label>
+                <div>
+                    @Html.Password("Password-repeat", "", new { @class = "w3-input w3-border", @placeholder = "ยืนยัน Password" })
+                </div>
+            </p>
+            <p>
+                <label><b>Email *</b></label>
+                <div>
+                    @Html.TextBox("Email", "", new { @class = "w3-input w3-border", @placeholder = "Email" })
+                </div>
+            </p>
+
+            <div class="text-center">
+                <label><b>สมัครสมาชิกในฐานะ: *</b></label><br />
+                <input type="radio" class="w3-radio" name="status" value="teacher" checked> <label>ครูผู้สอน</label>
+                <input type="radio" class="w3-radio" name="status" value="student">  <label>นักเรียน/ผู้ปกครอง</label>
+            </div>
+            <hr>
+            <p>
+                <button class="w3-btn w3-green w3-center registerbtn">ยืนยันการสมัครสมาชิก</button>
+            </p>
+            <div class="w3-container signin">
+                <p>มีAccountอยู่แล้ว? <a href="@Url.Action("Index","Login")"><font color="blue">กดเข้าสู่ระบบที่นี่</font> </a></p>
+            </div>
+        </form>
     </div>

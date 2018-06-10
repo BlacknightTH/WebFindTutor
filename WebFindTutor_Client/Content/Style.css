@@ -1,31 +1,4 @@
-﻿/* Add padding to containers */
-.container {
-    padding: 16px;
-    box-sizing: border-box;
-    background-color: white;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-}
-
-    input[type=text]:focus, input[type=password]:focus {
-        background-color: #ddd;
-        outline: none;
-    }
-
-/* Overwrite default styles of hr */
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-}
-
+﻿/* Overwrite default styles of hr */
 /* Set a style for the submit button */
 .registerbtn {
     background-color: #4CAF50;
@@ -52,4 +25,95 @@ a {
     background-color: #f1f1f1;
     text-align: center;
 }
+/* Button */
+.ubtn1 {
+    background-color: #4CAF50;
+}
+/**********/
 
+/***************** Navbar *********************/
+.navbar-default {
+    background-color: #208ee5;
+    border-color: #2270a3;
+}
+
+    .navbar-default .navbar-brand {
+        color: #c0ebf6;
+    }
+
+        .navbar-default .navbar-brand:hover,
+        .navbar-default .navbar-brand:focus {
+            color: #ffffff;
+        }
+
+    .navbar-default .navbar-text {
+        color: #c0ebf6;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #c0ebf6;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #ffffff;
+        }
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: #ffffff;
+        background-color: #2270a3;
+    }
+
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open > a:focus {
+        color: #ffffff;
+        background-color: #2270a3;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: #2270a3;
+    }
+
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: #2270a3;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #c0ebf6;
+        }
+
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: #c0ebf6;
+    }
+
+    .navbar-default .navbar-link {
+        color: #c0ebf6;
+    }
+
+        .navbar-default .navbar-link:hover {
+            color: #ffffff;
+        }
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #c0ebf6;
+    }
+
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #ffffff;
+        }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        background-color: #2270a3;
+    }
+}
+/**********************************************/
