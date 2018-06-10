@@ -13,7 +13,7 @@ namespace WebFindTutor_Client
 
         static GlobalVariables()
         {
-            WebApiClient.BaseAddress = new Uri("http://localhost:2930/api/");
+            WebApiClient.BaseAddress = new Uri("http://localhost:9519/api/");
             WebApiClient.DefaultRequestHeaders.Clear();
             WebApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
